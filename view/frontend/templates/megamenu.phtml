@@ -1,0 +1,43 @@
+<?php
+/**
+ *  DNAFactory Megamenu
+ *
+ * @var \DNAFactory\Megamenu\Block\Megamenu $block
+ */
+?>
+
+<?php
+    /** @var DNAFactory\Megamenu\Helper\Data $helper */
+    $helper = $this->helper('DNAFactory\Megamenu\Helper\Data');
+    $config = $helper->getConfig('dnafactory_megamenu');
+    $columnsLimit = 0;
+?>
+
+<?php if ($config['general']['enable']) : ?>
+<?php $megaMenu = $block->getMegamenuHtml(); ?>
+
+<nav class="navigation dna-megamenu" role="navigation">
+
+    <ul>
+        <?php echo $megaMenu; ?>
+    </ul>
+
+</nav>
+
+<script type="text/javascript">
+    require([
+        'jquery',
+        'DNAFactory_Megamenu/js/megamenu'
+    ], function ($) {});
+</script>
+
+<?php else : ?>
+<?php $megaMenu = $block->getHtml('level-top', 'submenu', $columnsLimit); ?>
+
+    <nav class="navigation" data-action="navigation">
+        <ul data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
+            <?= /* @escapeNotVerified */ $megaMenu ?>
+        </ul>
+    </nav>
+
+<?php endif; ?>
