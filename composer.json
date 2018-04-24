@@ -1,0 +1,47 @@
+{
+    "name": "dnafactory/mage2-megamenu",
+    "description": "",
+    "require": {
+        "php": "^7.0|^7.1",
+        
+        "magento/magento-composer-installer": "*"
+    },
+    "authors": [
+        {
+            "name": "DNAFactory",
+            "email": "info@dnafactory.it",
+            "homepage": "https://www.dnafactory.it",
+            "role": "Owner"
+        },
+        {
+            "name": "Daniel Russo",
+            "email": "daniel@dnafactory.it",
+            "homepage": "https://www.danielrussob.it",
+            "role": "Developer"
+        }
+    ],
+    "suggest": {
+
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "DNAFactory\\Megamenu\\": ""
+        }
+    },
+    "extra": {
+        "map": [
+            [
+                "*",
+                "DNAFactory/Megamenu"
+            ]
+        ]
+    }
+}
