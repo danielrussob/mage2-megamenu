@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
     <menu>
-        <add id="DNAFactory_Megamenu::megamenu" title="Mega Menu" module="DNAFactory_Megamenu" sortOrder="900" parent="DNAFactory_Theme::theme_menu" resource="DNAFactory_Theme::theme_menu"/>
+        <add id="DNAFactory_Megamenu::megamenu" title="Mega Menu" module="DNAFactory_Megamenu" sortOrder="900" resource="DNAFactory_Megamenu::config_megamenu"/>
         <add id="DNAFactory_Megamenu::configration" title="Configuration" module="DNAFactory_Megamenu" sortOrder="901" parent="DNAFactory_Megamenu::megamenu" action="adminhtml/system_config/edit/section/dnafactory_megamenu" resource="DNAFactory_Megamenu::config_megamenu"/>
     </menu>
 </config>
