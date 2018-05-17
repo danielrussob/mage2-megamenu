@@ -34,13 +34,5 @@
         "psr-4": {
             "DNAFactory\\Megamenu\\": ""
         }
-    },
-    "extra": {
-        "map": [
-            [
-                "*",
-                "DNAFactory/Megamenu"
-            ]
-        ]
     }
 }
